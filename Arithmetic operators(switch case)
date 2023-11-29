@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+//Arithmetic operations by Switch case
+int main(){
+    int n1, n2;
+    char op;
+    float a;
+    cout<<"Enter the first number:: "<<endl;
+    cin>>n1;
+    cout<<"Enter the second number:: "<<endl;
+    cin>>n2;
+    cout<<"Enter the arithmetic operator you wish to use(+, -, *, /):: "<<endl;
+    cin>>op;
+    switch(op){
+        case '+':
+            cout<<n1+n2;
+            break;
+        case '-':
+            cout<<n1-n2;
+            break;
+        case '*':
+            cout<<n1*n2;
+            break;
+        case '/':
+            cout<<n1/n2;
+            break;
+        default:
+            cout<<"Invalid Input.";
+    }
+    return 0;
+}
