@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main(){
+    char n;
+    int a;
+    cout<<"Enter the character to be checked:: "<<endl;
+    cin>>n;
+    a=n;
+    if (a>64 && a<91){
+        cout<<"The character "<<n<<" is in UPPER CASE."<<endl;a+=32;
+        cout<<"In Lower case:: "<<(char)a;
+    }
+    else if(a>91 && a<123){
+        cout<<"The character "<<n<<" is in lower case."<<endl;a-=32;
+        cout<<"In Upper case:: "<<(char)a;
+    }
+    else
+        cout<<"Invalid Input";
+    return 0;
+}
