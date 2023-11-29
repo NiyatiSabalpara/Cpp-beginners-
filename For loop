@@ -1,0 +1,13 @@
+//Sum of N even natural numbers
+#include<iostream>
+using namespace std;
+int main(){
+    int n, i, sum=0;
+    cout<<"Enter the number of even numbers to be added:: "<<endl;
+    cin>>n;
+    for(i=0; i<=n; i++){
+        sum+=i*2;
+    }
+    cout<<"The sum of "<<n<<" even numbers is:: "<<sum;
+    return 0;
+}
