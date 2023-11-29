@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n, m, i, sum=0;
+    cout<<"Enter the number N and M (N>M):: "<<endl;
+    cin>>n>>m;
+    if(n>m){
+        for(i=m+1; i<n; i++){
+            sum=sum+i;
+        }
+        cout<<"Sum is:: "<<sum;
+    }
+    else
+        cout<<"Invalid Input.";
+    return 0;
+
+}
