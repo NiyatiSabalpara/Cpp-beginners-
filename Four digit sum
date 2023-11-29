@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+//Sum of Four digit number
+int main(){
+    int n1, a=0;
+    cout<<"Enter the four digit number:: "<<endl;
+    cin>>n1;
+    a=a+(n1%10);
+    n1=n1/10;
+    a=a+(n1%10);
+    n1=n1/10;
+    a=a+(n1%10);
+    n1=n1/10;
+    a=a+(n1%10);
+    cout<<"Sum is:: "<<a;
+    return 0;
+    }
