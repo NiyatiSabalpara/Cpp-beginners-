@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+//Ternary operator
+int main(){
+    int a1, a2;
+    cout<<"Enter the first number:: "<<endl;
+    cin>>a1;
+    cout<<"Enter the second number:: "<<endl;
+    cin>>a2;
+    (a1>a2)?cout<<"The largest number is:: "<<a1:cout<<"The largest number is:: "<<a2;
+    return 0;
+}
