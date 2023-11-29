@@ -1,0 +1,26 @@
+//Check whether number is prime or not using break
+#include<iostream>
+using namespace std;
+int main(){
+   int n,n1 , i;
+   cout<<"Enter the number:: "<<endl;
+   cin>>n;
+   n1=0;
+   if(n==1 || n==0){
+    cout<<"It is a Special number";
+   }
+   else if(n==2 || n==3){
+    cout<<"It is a Prime number.";
+   }
+   else{
+    for(i=2; i<n; i++){
+        if(n%i==0)
+            n1=1; break;
+    }
+   }
+   if(n1==0)
+    cout<<"Prime number";
+   else
+    cout<<"Not a Prime number";
+   return 0;
+}
