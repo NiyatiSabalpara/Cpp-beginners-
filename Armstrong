@@ -1,0 +1,26 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+   int n, r, s=0, p, i, a;
+// r-remainder || s-sum || a-number of digits || i-looping variable
+   cout<<"Enter the number:: "<<endl;
+   cin>>n;
+   while(n>0){
+    n=p;
+    while(n!=0){
+        n=n/10;
+        a++;
+    }
+    n=p;
+    for(i=0; n!=0; i++){
+        r=n%10;
+        s=s+pow(r, a);
+    }
+   }
+   if(s==p)
+    cout<<"Armstrong number";
+   else
+    cout<<"Not an Armstrong number";
+   return 0;
+}
