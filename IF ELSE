@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+//using IF ELSE
+int main(){
+    int sa, d, a;
+    cout<<"Enter the sales amount:: "<<endl;
+    cin>>sa;
+    if (sa>5000){
+        d=sa*12/100;
+
+        }
+    else if(sa>0 && sa<=5000){
+         d=sa*7/100;
+        }
+        else{
+            cout<<"Invalid Input";
+        }
+        a=sa-d;
+        cout<<"The discount amount is:: "<<d;
+        cout<<"Amount to be paid is:: "<<a;
+    return 0;
+}
