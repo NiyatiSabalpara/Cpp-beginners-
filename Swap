@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+//SWAPPING numbers
+int main(){
+    int n1, n2;
+    cout<<"Enter the first variable:: "<<endl;
+    cin>>n1;
+    cout<<"Enter the second variable:: "<<endl;
+    cin>>n2;
+    n1=n1+n2;
+    n2=n1-n2;
+    n1=n1-n2;
+    cout<<"AFTER SWAPPING:: "<<endl;
+    cout<<"First number is:: "<<n1<<endl;
+    cout<<"Second number is:: "<<n2<<endl;
+    return 0;
+}
