@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+//declaring a structure
+struct cricket{
+    char pname[20];
+    char country[20];
+    int matches;
+    int bavg;
+};
+int main(){
+    cricket s[3]; //initializing structure variable
+    int i;
+    for(i=1; i<=3; i++){
+        cout<<"Enter name:: "<<endl;
+        cin>>s[i].pname;
+        cout<<"Enter country:: "<<endl;
+        cin>>s[i].country;
+        cout<<"Enter number of matches played:: "<<endl;
+        cin>>s[i].matches;
+        cout<<"Average Batting of player:: "<<endl;
+        cin>>s[i].bavg;
+        }
+    cout<<"The players having batting avg more than 50: "<<endl;
+    for(i=0; i<=3; i++){
+        if(s[i].bavg>50)
+            cout<<s[i].pname<<endl;
+        else
+            cout<<"None";
+    }
+    return 0;
+}
+
