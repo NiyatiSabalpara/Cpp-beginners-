@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+class Student{
+  char name[20];
+  int rollno;
+  char branch[20];
+  int m1, m2, m3, s=0;
+  float avg;
+  public:
+      void read(){
+        cout<<"Enter the name:: "<<endl;
+        cin>>name;
+        cout<<"Enter the roll number of student:: "<<endl;
+        cin>>rollno;
+        cout<<"Enter the branch of student:: "<<endl;
+        cin>>branch;
+        cout<<"Enter the marks of three subjects:: "<<endl;
+        cin>>m1>>m2>>m3;
+        s=(m1+m2+m3)/3;
+      }
+      void display(){
+          if(s>=40){
+            cout<<"PASS";
+            cout<<"Name:: "<<name<<endl;
+            cout<<"Roll Number:: "<<rollno<<endl;
+            cout<<"Branch:: "<<branch<<endl;}
+          else
+            cout<<"FAIL";
+      }
+};
+int main(){
+    Student s;
+    for(int i=0; i<10; i++){
+    s.read();
+    s.display();}
+    return 0;
+}
