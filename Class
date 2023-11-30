@@ -1,0 +1,18 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+//declaring class
+class Student{
+  public:
+    char name[10];
+    int rollno;
+};
+int main(){
+//declaring object of class
+    Student s;
+    strcpy(s.name, "John");
+    s.rollno= 2;
+    cout<<"Student name:: "<<s.name<<endl;
+    cout<<"Roll number:: "<<s.rollno;
+    return 0;
+}
