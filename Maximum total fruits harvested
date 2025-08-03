@@ -1,0 +1,33 @@
+class Solution {
+public:
+    int maxTotalFruits(vector<vector<int>>& fruits, int startPos, int k) {
+        int n = fruits.size();
+        vector<int> positions(n), amounts(n);
+        for (int i = 0; i < n; ++i) {
+            positions[i] = fruits[i][0];
+            amounts[i] = fruits[i][1];
+        }
+
+        // prefix sum
+        vector<int> preSum(n+1, 0);
+        for (int i = 1; i <= n; ++i)
+            preSum[i] = preSum[i-1] + amounts[i-1];
+
+        int ans = 0, left = 0;
+        // Sliding window from positions[left] to positions[right]
+        for (int right = 0; right < n; ++right) {
+            // Move left pointer up as long as window cannot be collected within k steps
+            // Compute min steps needed to cover [positions[left], positions[right]] starting from startPos
+            while(left <= right) {
+                int l = positions[left], r = positions[right];
+                int minSteps = min(abs(startPos - l) + (r - l), abs(startPos - r) + (r - l));
+                if (minSteps <= k)
+                    break;
+                ++left;
+            }
+            int sum = preSum[right+1] - preSum[left];
+            ans = max(ans, sum);
+        }
+        return ans;
+    }
+};
